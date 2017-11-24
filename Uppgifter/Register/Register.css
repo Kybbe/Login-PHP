@@ -1,0 +1,19 @@
+form {
+    background-color: lightgray;
+    margin: 20px;
+    border: solied 4px black;
+    padding: 20px;
+}
+
+body {
+    color: Black;
+    text-align: center;
+    font-style: normal;
+}
+
+input {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: monospace;
+}
