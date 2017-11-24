@@ -20,8 +20,8 @@
     <input type="text" name="Firstname">
     <br>
     
-    First name: <br>
-    <input type="text" name="Firstname">
+    Last name: <br>
+    <input type="text" name="Lastname">
     <br>
     
     E-mail: <br>
