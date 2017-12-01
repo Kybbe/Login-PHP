@@ -10,7 +10,19 @@
     
     <body>
     
-        <h1>suck my aaaaaaaaassssssssssssss</h1>
+        <form method="post" action="Submit.php">
+        
+            Username: <br><input type="text" name="Username"><br>
+            
+            Password: <br><input type="password" name="Password"><br>
+            
+            <input type="submit" value="Submit">
+            
+        </form>
+        
+        <?php
+    
+        ?>
     
     </body>
 
