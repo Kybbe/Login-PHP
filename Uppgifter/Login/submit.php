@@ -17,7 +17,16 @@ $dbc = mysqli_connect("localhost","root","","register");
 $Username = $_POST['Username'];
 $Password = $_POST['Password'];
 
-$query = "SELECT * FROM register
-(Username,Password) VALUES('$Username','$Password');";
+$Query = "SELECT * FROM register where Username='$Username' AND Password='$Password';";
+
+$Result = mysqli_query($dbc, $Query);
+
+if($row = mysqli_fetch_array($Result)) {
+    echo "Successfully logged in!";
+}
+   
+   else {
+       echo "Username and Password did'nt match existing account";
+   }
 
 ?>
