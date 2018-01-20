@@ -8,10 +8,10 @@
     
     <body>
         
-        <div id="Hideable First">
+        <div id="HideableFirst">
             <div id="AlertDiv" >
             <h2>Alert</h2>
-            <button id="Alert" onClick="Meddelande()">Click Me</button>
+            <button id="Alert" onclick="Meddelande()">Click Me</button>
             </div>
         
             <div id="HoverDiv">
@@ -30,6 +30,8 @@
             <h2>BackgroundColor</h2>
             <button id="BakgrundsFärg" onclick="BakgrundsfärgChange()">Klicka så ska jag visa dig vägen // bästa färgen</button>
             </div>
+            
+            <div id="RGBdiv" onclick="rgbdiv()" style="height:50px; width:50px; margin:10px; background-color:red;font-size:11px;"><p>Klicka för att se annan färg</p></div>
         
         </div>
             
@@ -80,6 +82,23 @@
                     else {x.style.display = "none";
                          x2.style.display = "block";}
                 }
+                
+                function rgbdiv() {
+                     var x = document.getElementById("RGBdiv");
+                    if(x.style.backgroundColor === "red") {
+                        
+                        x.style.backgroundColor = "green"}
+                    
+                    
+                    else if(x.style.backgroundColor === "green") {
+                        
+                        x.style.backgroundColor = "blue" }
+                    
+                    else if(x.style.backgroundColor === "blue") {
+                        
+                        x.style.backgroundColor = "red" }
+                        
+                    }
                 
             </script>
     </body>
