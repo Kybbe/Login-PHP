@@ -1,0 +1,19 @@
+#Sneaky {
+    display: none;
+}
+
+#HideText {
+    display: none;
+}
+
+div {
+    border:solid 2px black;
+}
+
+body {
+    text-align: center;
+}
+
+button {
+    margin-bottom: 20px;
+}
