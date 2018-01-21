@@ -31,8 +31,20 @@
             <button id="BakgrundsFärg" onclick="BakgrundsfärgChange()">Klicka så ska jag visa dig vägen // bästa färgen</button>
             </div>
             
-            <div id="RGBdiv" onclick="rgbdiv()" style="height:50px; width:50px; margin:10px; background-color:red;font-size:11px;"><p>Klicka för att se annan färg</p></div>
-        
+            <div>
+            <h2>RGB Div</h2>
+            <div id="RGBdiv" onclick="rgbdiv()" style="height:50px; width:50px; margin:10px; background-color:red;"></div>
+            </div>
+            
+            <div id="MatteBubblan">
+            <h2>MatteBubblan</h2>
+            <div id="ValueDisplay" style="display: inline-block;">0</div>
+            <button onclick="increaseBy(1)">+1</button>
+            <button onclick="increaseBy(10)">+10</button>
+            <button onclick="increaseBy(100)">+100</button>
+            <button onclick="xReset()">Reset</button>
+            </div>
+       
         </div>
             
             <div id="HT">
@@ -86,19 +98,25 @@
                 function rgbdiv() {
                      var x = document.getElementById("RGBdiv");
                     if(x.style.backgroundColor === "red") {
-                        
                         x.style.backgroundColor = "green"}
-                    
-                    
                     else if(x.style.backgroundColor === "green") {
-                        
                         x.style.backgroundColor = "blue" }
-                    
                     else if(x.style.backgroundColor === "blue") {
-                        
-                        x.style.backgroundColor = "red" }
-                        
+                        x.style.backgroundColor = "red" } 
                     }
+                
+                var xValueMath = 0;
+                
+                function increaseBy(amount) {
+                    xValueMath = xValueMath + amount;
+                    xUpdate()
+                }
+                
+                function xUpdate() {            document.getElementById("ValueDisplay").innerHTML = xValueMath;
+                }
+                
+                function xReset() { document.getElementById("ValueDisplay").innerHTML = 0;
+                }
                 
             </script>
     </body>
