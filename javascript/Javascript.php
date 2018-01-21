@@ -38,11 +38,23 @@
             
             <div id="MatteBubblan">
             <h2>MatteBubblan</h2>
-            <div id="ValueDisplay" style="display: inline-block;">0</div>
+            <div id="ValueDisplay" style="display: inline-block;margin-bottom:10px;border:0 solid red;">0</div><br>
             <button onclick="increaseBy(1)">+1</button>
             <button onclick="increaseBy(10)">+10</button>
             <button onclick="increaseBy(100)">+100</button>
             <button onclick="xReset()">Reset</button>
+            </div>
+            
+            <div>
+                <h2>Div to corners</h2>
+                 <div id="moveDiv" style="position:absolute;width:50px;height:50px;background-image: url(phpZnoKc2PM.jpg);"> </div><br>
+
+                <center>
+                    <button onClick="move('TL')">Top left</button>
+                    <button onClick="move('TR')">Top right</button><br>
+                    <button onClick="move('BL')">Bottom left</button>
+                    <button onClick="move('BR')">Bottom right</button>
+                </center>
             </div>
        
         </div>
@@ -117,6 +129,45 @@
                 
                 function xReset() { document.getElementById("ValueDisplay").innerHTML = 0;
                 }
+                
+                 function move(pos){
+
+                    var div = document.getElementById("moveDiv");
+
+                    if(pos == "TR"){
+
+                        div.style.left = "";
+                        div.style.right = "0px";
+                        div.style.bottom = "";
+                        div.style.top = "0px";
+
+                    }
+                    else if(pos == "TL"){
+
+                        div.style.left = "0px";
+                        div.style.right = "";
+                        div.style.bottom = "";
+                        div.style.top = "0px";
+
+                    }
+                    else if(pos == "BR"){
+
+                        div.style.left = "";
+                        div.style.right = "0px";
+                        div.style.bottom = "0px";
+                        div.style.top = "";
+
+                    }
+                    else if(pos == "BL"){
+
+                        div.style.left = "0px";
+                        div.style.right = "";
+                        div.style.bottom = "0px";
+                        div.style.top = "";
+
+                    }
+
+    }
                 
             </script>
     </body>
